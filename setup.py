@@ -188,6 +188,8 @@ if nightly_build:
     if date_suffix is None:
       #The following line is only for local testing
       date_suffix = str(datetime.datetime.now().date().strftime("%m%d"))
+    else:
+      date_suffix = date_suffix.replace('.','')
     version_number = version_number + ".dev" + date_suffix
 
 cmd_classes = {}
